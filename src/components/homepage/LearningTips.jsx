@@ -5,7 +5,7 @@ import { GoDotFill } from "react-icons/go";
 
 const LearningTips = () => {
   return (
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto my-10 p-4">
       <SectionTitle>Learning Tips</SectionTitle>
       <div className="grid md:grid-cols-2 gap-4">
         <Card className="border bg-cyan-100 p-6">
