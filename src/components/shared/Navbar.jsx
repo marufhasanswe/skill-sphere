@@ -59,7 +59,7 @@ export function Navbar() {
               <Image
                 className=""
                 width={200}
-                height={100}
+                height={80}
                 alt="SkillSphere logo"
                 src={"/nav-logo.png"}
               ></Image>
@@ -68,7 +68,7 @@ export function Navbar() {
           <ul className="hidden items-center gap-4 md:flex">{links}</ul>
           <div className="flex items-center gap-1   ">
             <Button variant="tertiary">Sign In</Button>
-            <Button>Sign In</Button>
+            <Button>Sign Up</Button>
           </div>
         </header>
         {isMenuOpen && (
