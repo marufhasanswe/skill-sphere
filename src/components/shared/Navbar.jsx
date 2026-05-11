@@ -67,7 +67,7 @@ export function Navbar() {
           </div>
           <ul className="hidden items-center gap-4 md:flex">{links}</ul>
           <div className="flex items-center gap-1   ">
-            <Button variant="tertiary">Sign In</Button>
+            <Button variant="secondary">Sign In</Button>
             <Button>Sign Up</Button>
           </div>
         </header>
