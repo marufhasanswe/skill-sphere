@@ -13,41 +13,32 @@ import React from "react";
 import { Check } from "@gravity-ui/icons";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { authClient } from "@/lib/auth-client";
+import { redirect } from "next/navigation";
 
-const SignupPage = () => {
+const SigninPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
     const { data, error } = await authClient.signUp.email({
       name,
       email,
       password,
     });
-    console.log(data, error);
+    const user = data?.user;
+    if (user) {
+      redirect("/auth/signin");
+    }
   };
   return (
     <div className="container mx-auto h-[60vh] p-4 flex flex-col items-center justify-center">
-      <SectionTitle>Sign Up</SectionTitle>
+      <SectionTitle>Sign In</SectionTitle>
       <Form
         className="flex w-96 mx-auto flex-col gap-4 bg-blue-500 p-6 rounded-xl"
         onSubmit={onSubmit}
       >
-        <TextField
-          isRequired
-          name="name"
-          validate={(value) => {
-            if (value.length < 3) {
-              return "Name must be at least 3 characters";
-            }
-            return null;
-          }}
-        >
-          <Label>Name</Label>
-          <Input placeholder="John Doe" />
-          <FieldError />
-        </TextField>
         <TextField
           isRequired
           name="email"
@@ -102,4 +93,4 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage;
+export default SigninPage;
