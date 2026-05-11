@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Link, Button } from "@heroui/react";
+import { Button } from "@heroui/react";
 import MyNavLink from "./MyNavLink";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,8 +68,12 @@ export function Navbar() {
           </div>
           <ul className="hidden items-center gap-4 md:flex">{links}</ul>
           <div className="flex items-center gap-1   ">
-            <Button variant="secondary">Sign In</Button>
-            <Button>Sign Up</Button>
+            <Link href="/auth/signin">
+              <Button variant="secondary">Sign In</Button>
+            </Link>
+            <Link href="/auth/signup">
+              <Button>Sign Up</Button>
+            </Link>
           </div>
         </header>
         {isMenuOpen && (
