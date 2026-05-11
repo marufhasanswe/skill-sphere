@@ -1,8 +1,9 @@
 import { getInstructors } from "@/lib/data";
 import Image from "next/image";
 
-export default function TopInstructors() {
-  const instructors = getInstructors();
+export default async function TopInstructors() {
+  const instructors = await getInstructors();
+  console.log(instructors);
 
   return (
     <section className="py-16 px-6 bg-gray-50">

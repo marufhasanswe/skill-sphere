@@ -1,28 +1,28 @@
 [
   {
-    "name": "John Doe",
-    "role": "Full Stack Developer",
+    "name": "Emily Johnson",
+    "role": "Python Developer",
     "rating": 4.9,
     "students": "12.5k",
     "image": "https://i.pravatar.cc/150?img=12"
   },
   {
-    "name": "Sarah Khan",
-    "role": "UI/UX Designer",
+    "name": "Chris Evans",
+    "role": "React & Next.js Developer",
     "rating": 4.8,
     "students": "10.2k",
     "image": "https://i.pravatar.cc/150?img=32"
   },
   {
-    "name": "Michael Lee",
-    "role": "Data Scientist",
-    "rating": 4.9,
+    "name": "John Doe",
+    "role": "Fullstack Developer",
+    "rating": 4.8,
     "students": "15.8k",
     "image": "https://i.pravatar.cc/150?img=56"
   },
   {
     "name": "Emily Smith",
-    "role": "Digital Marketing Expert",
+    "role": "Data Anyalist",
     "rating": 4.7,
     "students": "9.3k",
     "image": "https://i.pravatar.cc/150?img=45"
