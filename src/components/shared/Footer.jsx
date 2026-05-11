@@ -22,9 +22,9 @@ const Footer = () => {
       {/* Content */}
       <div className="container mx-auto px-6 py-16">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-12">
           {/* logo */}
-          <div className="">
+          <div className="col-span-2">
             <div className="flex items-center">
               <Image
                 src="/footer-logo.png"

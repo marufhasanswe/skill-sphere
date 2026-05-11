@@ -6,7 +6,7 @@
     "duration": "20 hours",
     "rating": 4.8,
     "level": "Beginner",
-    "description": "Learn full-stack web development from scratch.",
+    "description": "Learn full-stack web development from scratch, starting with HTML, CSS, and JavaScript fundamentals. Progress into modern frameworks, backend development, APIs, authentication, and database management. This course is designed to take you from a complete beginner to a job-ready web developer with hands-on projects and real-world coding practices.",
     "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     "category": "Development"
   },
@@ -17,7 +17,7 @@
     "duration": "15 hours",
     "rating": 4.7,
     "level": "Intermediate",
-    "description": "Master modern UI/UX design principles and tools.",
+    "description": "Master modern UI/UX design principles by learning user research, wireframing, prototyping, and visual design techniques. Explore industry-standard tools like Figma and Adobe XD while working on real-world design projects. Improve your ability to create user-friendly, visually appealing, and accessible digital experiences.",
     "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1200&q=80",
     "category": "Design"
   },
@@ -28,7 +28,7 @@
     "duration": "12 hours",
     "rating": 4.6,
     "level": "Beginner",
-    "description": "Learn SEO, social media, and online marketing strategies.",
+    "description": "Learn essential digital marketing strategies including SEO, content marketing, social media management, email campaigns, and paid advertising. Understand how to build brand awareness, drive traffic, and convert leads into customers using modern online marketing techniques and analytics tools.",
     "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     "category": "Marketing"
   },
@@ -39,7 +39,7 @@
     "duration": "18 hours",
     "rating": 4.9,
     "level": "Intermediate",
-    "description": "Analyze data and build machine learning projects with Python.",
+    "description": "Analyze and visualize data using Python libraries such as NumPy, Pandas, and Matplotlib. Learn data cleaning, statistical analysis, and machine learning fundamentals. Build real-world projects that help you extract insights from complex datasets and prepare for data science careers.",
     "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80",
     "category": "Data Science"
   },
@@ -50,7 +50,7 @@
     "duration": "22 hours",
     "rating": 4.8,
     "level": "Advanced",
-    "description": "Build beautiful cross-platform mobile applications.",
+    "description": "Build high-performance, cross-platform mobile applications using Flutter and Dart. Learn UI design, state management, API integration, and app deployment for both Android and iOS. Develop production-ready apps with smooth animations and responsive layouts.",
     "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
     "category": "Development"
   },
@@ -61,7 +61,7 @@
     "duration": "14 hours",
     "rating": 4.7,
     "level": "Beginner",
-    "description": "Understand the basics of cyber security and ethical hacking.",
+    "description": "Understand core cybersecurity concepts including network security, encryption, malware protection, and ethical hacking basics. Learn how systems are attacked and how to defend against real-world cyber threats. Gain practical awareness of digital safety and security best practices.",
     "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
     "category": "Security"
   },
@@ -72,7 +72,7 @@
     "duration": "25 hours",
     "rating": 4.9,
     "level": "Intermediate",
-    "description": "Build fast and modern web applications using React and Next.js.",
+    "description": "Learn how to build fast, scalable, and modern web applications using React and Next.js. Cover components, hooks, routing, SSR, API routes, and deployment. Build production-grade applications with performance optimization and best practices.",
     "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=80",
     "category": "Development"
   },
@@ -83,7 +83,7 @@
     "duration": "16 hours",
     "rating": 4.8,
     "level": "Beginner",
-    "description": "Explore artificial intelligence and machine learning concepts.",
+    "description": "Explore the fundamentals of artificial intelligence and machine learning including supervised and unsupervised learning. Understand algorithms, model training, and data processing techniques. Build simple AI models and gain foundational knowledge for advanced AI development.",
     "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
     "category": "Artificial Intelligence"
   },
@@ -94,7 +94,7 @@
     "duration": "19 hours",
     "rating": 4.7,
     "level": "Advanced",
-    "description": "Learn cloud infrastructure, deployment, and AWS services.",
+    "description": "Learn cloud computing concepts and AWS services including EC2, S3, Lambda, and deployment strategies. Understand infrastructure as a service, scalability, and cloud architecture design. Build and deploy secure, scalable applications in the cloud environment.",
     "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
     "category": "Cloud Computing"
   }

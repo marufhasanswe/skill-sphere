@@ -1,5 +1,6 @@
 import { Button, Card } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BsStarFill } from "react-icons/bs";
 
@@ -21,9 +22,11 @@ const CourseCard = ({ course }) => {
         Rating: {course.rating}
         <BsStarFill className="text-yellow-400 "></BsStarFill>
       </p>
-      <Button variant="primary" className={"w-full"}>
-        View Details
-      </Button>
+      <Link href={`/courses/${course.id}`}>
+        <Button variant="primary" className={"w-full"}>
+          View Details
+        </Button>
+      </Link>
     </Card>
   );
 };
