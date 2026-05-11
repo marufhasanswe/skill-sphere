@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/example-course1.png",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Master modern UI/UX design principles and tools.",
-    "image": "https://i.postimg.cc/example-course2.png",
+    "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1200&q=80",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn SEO, social media, and online marketing strategies.",
-    "image": "https://i.postimg.cc/example-course3.png",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Analyze data and build machine learning projects with Python.",
-    "image": "https://i.postimg.cc/example-course4.png",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80",
     "category": "Data Science"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Advanced",
     "description": "Build beautiful cross-platform mobile applications.",
-    "image": "https://i.postimg.cc/example-course5.png",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
     "category": "Development"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Understand the basics of cyber security and ethical hacking.",
-    "image": "https://i.postimg.cc/example-course6.png",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
     "category": "Security"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Build fast and modern web applications using React and Next.js.",
-    "image": "https://i.postimg.cc/example-course7.png",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=80",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Explore artificial intelligence and machine learning concepts.",
-    "image": "https://i.postimg.cc/example-course8.png",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
     "category": "Artificial Intelligence"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.7,
     "level": "Advanced",
     "description": "Learn cloud infrastructure, deployment, and AWS services.",
-    "image": "https://i.postimg.cc/example-course9.png",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
     "category": "Cloud Computing"
   }
 ]

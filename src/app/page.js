@@ -1,11 +1,11 @@
-import Banner from "@/components/banner/Banner";
-import { Button } from "@heroui/react";
+import Banner from "@/components/homepage/Banner";
+import PopularCourses from "@/components/homepage/PopularCourses";
 
 export default function Home() {
   return (
     <div className="">
       <Banner></Banner>
-      <Button variant="outline">Click</Button>
+      <PopularCourses></PopularCourses>
     </div>
   );
 }
