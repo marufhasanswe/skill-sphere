@@ -13,7 +13,6 @@ export function Navbar() {
   const router = useRouter();
   const { data, isPending } = authClient.useSession();
   const user = data?.user;
-  console.log(user);
 
   const handleSignOut = async () => {
     await authClient.signOut({
@@ -101,9 +100,12 @@ export function Navbar() {
                 <Avatar>
                   <Avatar.Image
                     alt="John Doe"
-                    src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3"
+                    src={user?.image}
+                    referrerPolicy="no-referrer"
                   />
-                  <Avatar.Fallback>JD</Avatar.Fallback>
+                  <Avatar.Fallback>
+                    {user?.name.split(" ").map((name) => name[0])}
+                  </Avatar.Fallback>
                 </Avatar>
                 <Button onClick={() => handleSignOut()} variant="outline">
                   Sign Out

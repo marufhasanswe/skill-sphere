@@ -35,6 +35,11 @@ const SigninPage = () => {
       toast.success("Successfully Logged In!");
     }
   };
+  const handleGoogleSignin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   return (
     <div className="container mx-auto h-[90vh] p-4  flex flex-col items-center justify-center">
       <Form
@@ -97,7 +102,11 @@ const SigninPage = () => {
             <p className="text-center text-lg text-gray-100">Or</p>
           </div>
           <div>
-            <Button className="w-full" variant="tertiary">
+            <Button
+              onClick={handleGoogleSignin}
+              className="w-full"
+              variant="tertiary"
+            >
               <Icon icon="devicon:google" />
               Sign in with Google
             </Button>
