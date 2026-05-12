@@ -11,34 +11,37 @@ import {
 } from "@heroui/react";
 import React from "react";
 import { Check } from "@gravity-ui/icons";
-import SectionTitle from "@/components/shared/SectionTitle";
 import { authClient } from "@/lib/auth-client";
-import { redirect } from "next/navigation";
+import { toast } from "react-toastify";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
 
 const SigninPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const { data, error } = await authClient.signUp.email({
-      name,
+    const { data, error } = await authClient.signIn.email({
       email,
       password,
+      callbackURL: "/",
     });
-    const user = data?.user;
-    if (user) {
-      redirect("/auth/signin");
+
+    if (error) {
+      toast.error(error.message);
+    }
+    if (data?.user) {
+      toast.success("Successfully Logged In!");
     }
   };
   return (
-    <div className="container mx-auto h-[60vh] p-4 flex flex-col items-center justify-center">
-      <SectionTitle>Sign In</SectionTitle>
+    <div className="container mx-auto h-[90vh] p-4  flex flex-col items-center justify-center">
       <Form
-        className="flex w-96 mx-auto flex-col gap-4 bg-blue-500 p-6 rounded-xl"
+        className="flex w-96 mx-auto flex-col gap-4 bg-blue-400 p-6 rounded-xl shadow-2xl "
         onSubmit={onSubmit}
       >
+        <h2 className="text-2xl font-semibold text-center text-white">Login</h2>
         <TextField
           isRequired
           name="email"
@@ -79,14 +82,26 @@ const SigninPage = () => {
           </Description>
           <FieldError />
         </TextField>
-        <div className="flex gap-2">
-          <Button variant="tertiary" type="submit">
+        <div className="flex flex-col gap-2">
+          <Button variant="tertiary" type="submit" className={"w-full"}>
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+          <div className="flex items-center justify-center gap-2">
+            <Link
+              href={"/auth/signup"}
+              className="text-gray-600 hover:text-gray-800"
+            >
+              Register
+            </Link>
+            <p className="text-center text-lg text-gray-100">Or</p>
+          </div>
+          <div>
+            <Button className="w-full" variant="tertiary">
+              <Icon icon="devicon:google" />
+              Sign in with Google
+            </Button>
+          </div>
         </div>
       </Form>
     </div>

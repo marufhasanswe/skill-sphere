@@ -3,8 +3,6 @@ import Image from "next/image";
 
 export default async function TopInstructors() {
   const instructors = await getInstructors();
-  console.log(instructors);
-
   return (
     <section className="py-16 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">

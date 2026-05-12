@@ -1,13 +1,30 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import MyNavLink from "./MyNavLink";
 import Image from "next/image";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+  const { data, isPending } = authClient.useSession();
+  const user = data?.user;
+  console.log(user);
+
+  const handleSignOut = async () => {
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          router.push("/auth/signin");
+        },
+      },
+    });
+  };
+
   const links = (
     <>
       <li>
@@ -67,13 +84,32 @@ export function Navbar() {
             </div>
           </div>
           <ul className="hidden items-center gap-4 md:flex">{links}</ul>
-          <div className="flex items-center gap-1   ">
-            <Link href="/auth/signin">
-              <Button variant="secondary">Sign In</Button>
-            </Link>
-            <Link href="/auth/signup">
-              <Button>Sign Up</Button>
-            </Link>
+          <div className="flex items-center gap-2   ">
+            {!user && (
+              <>
+                {" "}
+                <Link href="/auth/signin">
+                  <Button variant="secondary">Sign In</Button>
+                </Link>
+                <Link href="/auth/signup">
+                  <Button>Sign Up</Button>
+                </Link>
+              </>
+            )}
+            {user && (
+              <>
+                <Avatar>
+                  <Avatar.Image
+                    alt="John Doe"
+                    src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3"
+                  />
+                  <Avatar.Fallback>JD</Avatar.Fallback>
+                </Avatar>
+                <Button onClick={() => handleSignOut()} variant="outline">
+                  Sign Out
+                </Button>
+              </>
+            )}
           </div>
         </header>
         {isMenuOpen && (

@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-24">
+    <footer className="relative mt-12">
       <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
       {/* Background Layer */}
@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Top Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-12">
           {/* logo */}
-          <div className="col-span-2">
+          <div className="col-span-2 md:col-span-1">
             <div className="flex items-center">
               <Image
                 src="/footer-logo.png"

@@ -10,7 +10,6 @@ const CourseDetailsPage = async ({ params }) => {
   const { id } = await params;
   const courses = await getCourses();
   const course = courses.find((c) => c.id == id);
-  console.log(course);
   return (
     <>
       <div className="container mx-auto p-4">

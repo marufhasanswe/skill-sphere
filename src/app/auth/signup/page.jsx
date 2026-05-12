@@ -14,8 +14,10 @@ import { Check } from "@gravity-ui/icons";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const SignupPage = () => {
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -29,20 +31,23 @@ const SignupPage = () => {
       image,
     });
     if (error) {
-      console.log(error);
       toast.error(error.message);
     }
-    if (data?.user) {
+    if (!error) {
       toast.success("Successfully Register your account!");
+      await authClient.signOut();
+      router.push("/auth/signin");
     }
   };
   return (
-    <div className="container mx-auto h-[60vh] p-4 flex flex-col items-center justify-center">
-      <SectionTitle>Please register your account</SectionTitle>
+    <div className="container mx-auto h-[90vh] p-4 flex flex-col items-center justify-center">
       <Form
-        className="flex w-96 mx-auto flex-col gap-4 bg-blue-500 p-6 rounded-xl"
+        className="flex w-96 mx-auto flex-col gap-4 bg-blue-400 p-6 rounded-xl shadow-2xl"
         onSubmit={onSubmit}
       >
+        <h2 className="text-2xl font-semibold text-center text-white">
+          Registration
+        </h2>
         <TextField
           isRequired
           name="name"
@@ -105,7 +110,7 @@ const SignupPage = () => {
         <div className="flex gap-2">
           <Button variant="tertiary" type="submit">
             <Check />
-            Register
+            Submit
           </Button>
           <Button type="reset" variant="secondary">
             Reset
