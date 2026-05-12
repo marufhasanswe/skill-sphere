@@ -13,23 +13,32 @@ import React from "react";
 import { Check } from "@gravity-ui/icons";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 const SignupPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
+    const image = e.target.image.value;
     const password = e.target.password.value;
     const { data, error } = await authClient.signUp.email({
       name,
       email,
       password,
+      image,
     });
-    console.log(data, error);
+    if (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
+    if (data?.user) {
+      toast.success("Successfully Register your account!");
+    }
   };
   return (
     <div className="container mx-auto h-[60vh] p-4 flex flex-col items-center justify-center">
-      <SectionTitle>Sign Up</SectionTitle>
+      <SectionTitle>Please register your account</SectionTitle>
       <Form
         className="flex w-96 mx-auto flex-col gap-4 bg-blue-500 p-6 rounded-xl"
         onSubmit={onSubmit}
@@ -63,6 +72,11 @@ const SignupPage = () => {
           <Input placeholder="john@example.com" />
           <FieldError />
         </TextField>
+        <TextField isRequired name="image" type="url">
+          <Label>Image URL</Label>
+          <Input placeholder="Input your image URL" />
+          <FieldError />
+        </TextField>
         <TextField
           isRequired
           minLength={8}
@@ -91,7 +105,7 @@ const SignupPage = () => {
         <div className="flex gap-2">
           <Button variant="tertiary" type="submit">
             <Check />
-            Submit
+            Register
           </Button>
           <Button type="reset" variant="secondary">
             Reset
