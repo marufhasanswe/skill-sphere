@@ -15,6 +15,8 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const SignupPage = () => {
   const router = useRouter();
@@ -38,6 +40,11 @@ const SignupPage = () => {
       await authClient.signOut();
       router.push("/auth/signin");
     }
+  };
+  const handleGoogleSignin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
   return (
     <div className="container mx-auto h-[90vh] p-4 flex flex-col items-center justify-center">
@@ -107,14 +114,34 @@ const SignupPage = () => {
           </Description>
           <FieldError />
         </TextField>
-        <div className="flex gap-2">
-          <Button variant="tertiary" type="submit">
+        <div className="flex flex-col gap-2">
+          <Button
+            variant="primary"
+            type="submit"
+            className={"w-full text-center bg-black "}
+          >
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+          <div className="flex items-center justify-center gap-2">
+            <Link
+              href={"/auth/signup"}
+              className="text-gray-600 hover:text-gray-800"
+            >
+              Register
+            </Link>
+            <p className="text-center text-lg text-gray-100">Or</p>
+          </div>
+          <div>
+            <Button
+              onClick={handleGoogleSignin}
+              className="w-full"
+              variant="tertiary"
+            >
+              <Icon icon="devicon:google" />
+              Sign in with Google
+            </Button>
+          </div>
         </div>
       </Form>
     </div>
