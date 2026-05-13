@@ -8,7 +8,7 @@ const LearningTips = () => {
     <div className="container mx-auto my-10 p-4">
       <SectionTitle>Learning Tips</SectionTitle>
       <div className="grid md:grid-cols-2 gap-4">
-        <Card className="border bg-cyan-100 p-6">
+        <Card className="border bg-cyan-100 p-6 hover:shadow-xl transition duration-300">
           <h4 className="text-xl font-semibold">Study techniques:</h4>
           <ol className="list-disc list-inside space-y-4">
             <li className=" text-gray-700  font-medium">
@@ -39,7 +39,7 @@ const LearningTips = () => {
             </li>
           </ol>
         </Card>
-        <Card className="border w-full bg-amber-100 p-6">
+        <Card className="border w-full bg-amber-100 p-6 hover:shadow-xl transition duration-300">
           <h4 className="text-xl font-semibold">Time management tips:</h4>
           <ol className="list-disc list-inside space-y-4">
             <li className=" text-gray-700  font-medium">

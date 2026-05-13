@@ -6,7 +6,7 @@ import { BsStarFill } from "react-icons/bs";
 
 const CourseCard = ({ course }) => {
   return (
-    <Card className="shadow border flex flex-col  justify-between">
+    <Card className="shadow border flex flex-col  justify-between hover:shadow-xl transition duration-300">
       <div className="relative aspect-square h-[300px]">
         <Image
           src={course.image}
