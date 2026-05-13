@@ -1,9 +1,13 @@
-export const getCourses = async () => {
+export const getCourses = async (search = "") => {
   const res = await fetch(
     "https://skill-sphere-three-iota.vercel.app/data.json",
   );
   const data = await res.json();
-  return data;
+  if (!search) return data;
+
+  return data.filter((course) =>
+    course.title.toLowerCase().includes(search.toLowerCase()),
+  );
 };
 
 export const getInstructors = async () => {
