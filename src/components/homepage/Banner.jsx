@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="max-w-7xl mx-auto px-6 text-white flex  justify-between">
           <div className="">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
-              Upgrade Your <span className="">Skills</span> Today
+              Upgrade Your <span className="">Skill</span> Today
             </h1>
             <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200">
               Master in-demand skills with expert-led courses, hands-on
@@ -18,12 +18,15 @@ const Banner = () => {
             </p>
 
             <div className="flex gap-4">
-              <Link href="#">
+              <Link href="/courses">
                 <Button className="">Explore Courses</Button>
               </Link>
 
-              <Link href="/pricing">
-                <Button variant="outline" className="text-white">
+              <Link href="#">
+                <Button
+                  variant="outline"
+                  className="text-white animate__animated animate__pulse animate__infinite"
+                >
                   Watch Demo
                 </Button>
               </Link>

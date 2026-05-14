@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
   const router = useRouter();
@@ -16,6 +17,7 @@ const UpdateProfile = () => {
       name,
     });
     router.push("/my-profile");
+    toast.success("Successfully updated your profile!");
   };
   return (
     <div className="max-w-md mx-auto border p-8 shadow hover:shadow-xl rounded-xl my-10">
