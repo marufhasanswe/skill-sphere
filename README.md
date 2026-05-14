@@ -1,49 +1,65 @@
 # Skill Sphere 🎓
 
-Skill Sphere is a modern skill-based EdTech platform where users can explore online courses, view instructor profiles, and enhance their learning journey through an interactive and responsive user interface.
+Skill Sphere is a modern skill-based EdTech platform built with Next.js where users can explore courses, view instructor profiles, authenticate securely, and access protected learning resources through a clean and responsive interface.
 
-## 🌐 Live Website
+---
+
+# 🌐 Live Website
 
 https://skill-sphere-three-iota.vercel.app/
 
 ---
 
-## 🚀 Project Purpose
+# 🚀 Project Purpose
 
-The main purpose of this project is to build a responsive and user-friendly online learning platform using Next.js. Users can browse courses, search for learning content, authenticate securely, and access protected course details pages.
+The goal of this project is to create a responsive and interactive online learning platform where users can discover skill-based courses and improve their learning experience with secure authentication and modern UI design.
 
 ---
 
-## ✨ Key Features
+# ✨ Key Features
 
-- 🔐 Authentication system with protected routes
-- 👤 User profile page with session-based data
+- 🔐 Authentication system using Better Auth
+- 🔒 Protected routes with Proxy/Middleware
+- 🔁 Redirect back after successful login
+- 👤 User profile page with logged-in user information
 - 📚 Browse all available courses
 - 🔎 Search functionality for courses
 - 👨‍🏫 Top instructors section
 - 🎨 Modern responsive UI design
 - ⚡ Dynamic routing using Next.js App Router
-- 🔄 Redirect users after successful login
-- 📱 Fully responsive for mobile, tablet and desktop
-- ✨ Animated "Watch Demo" button using Animate.css
+- ✨ Animate.css animation in banner "Watch Demo" button
+- 📱 Mobile and desktop responsive layout
+- 🔔 Toast notifications for authentication feedback
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
-- Next.js
-- React
-- Tailwind CSS
+- Next.js 16
+- React 19
+- Tailwind CSS 4
 - HeroUI
 - Better Auth
+- MongoDB
 - React Toastify
 - Lucide React
-- Iconify
+- React Icons
+- Iconify Icons
+- Animate.css
 
 ---
 
-## 📦 NPM Packages Used
+# 📦 NPM Packages Used
 
-```bash
+## Production Dependencies
+
+```bash id="0p4v8j"
+npm install @heroui/react
+npm install @heroui/styles
 npm install animate.css
+npm install better-auth
+npm install lucide-react
+npm install mongodb
+npm install react-icons
+npm install react-toastify
 ```
