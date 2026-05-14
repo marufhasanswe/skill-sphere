@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Avatar, Button } from "@heroui/react";
+import { Avatar, Button, Spinner } from "@heroui/react";
 import MyNavLink from "./MyNavLink";
 import Image from "next/image";
 import Link from "next/link";
@@ -84,6 +84,7 @@ export function Navbar() {
           </div>
           <ul className="hidden items-center gap-4 md:flex">{links}</ul>
           <div className="flex items-center gap-2   ">
+            {isPending && <Spinner size="md" color="accent" />}
             {!user && (
               <>
                 {" "}
@@ -99,7 +100,7 @@ export function Navbar() {
               <>
                 <Avatar>
                   <Avatar.Image
-                    alt="John Doe"
+                    alt={user?.name}
                     src={user?.image}
                     referrerPolicy="no-referrer"
                   />

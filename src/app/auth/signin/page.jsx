@@ -88,7 +88,11 @@ const SigninPage = () => {
           <FieldError />
         </TextField>
         <div className="flex flex-col gap-2">
-          <Button variant="tertiary" type="submit" className={"w-full"}>
+          <Button
+            variant="primary"
+            type="submit"
+            className={"w-full bg-gray-800"}
+          >
             <Check />
             Submit
           </Button>
