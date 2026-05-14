@@ -73,19 +73,21 @@ export function Navbar() {
               </svg>
             </button>
             <div>
-              <Image
-                className=""
-                width={200}
-                height={80}
-                alt="SkillSphere logo"
-                src={"/nav-logo.png"}
-              ></Image>
+              <Link href={"/"}>
+                <Image
+                  className=""
+                  width={200}
+                  height={80}
+                  alt="SkillSphere logo"
+                  src={"/nav-logo.png"}
+                ></Image>
+              </Link>
             </div>
           </div>
           <ul className="hidden items-center gap-4 md:flex">{links}</ul>
           <div className="flex items-center gap-2   ">
             {isPending && <Spinner size="md" color="accent" />}
-            {!user && (
+            {!user && !isPending && (
               <>
                 {" "}
                 <Link href="/auth/signin">
@@ -98,16 +100,21 @@ export function Navbar() {
             )}
             {user && (
               <>
-                <Avatar>
-                  <Avatar.Image
-                    alt={user?.name}
-                    src={user?.image}
-                    referrerPolicy="no-referrer"
-                  />
-                  <Avatar.Fallback>
-                    {user?.name.split(" ").map((name) => name[0])}
-                  </Avatar.Fallback>
-                </Avatar>
+                <Link href={"/my-profile"}>
+                  <Avatar>
+                    <Avatar.Image
+                      alt={user?.name}
+                      src={user?.image}
+                      referrerPolicy="no-referrer"
+                    />
+                    <Avatar.Fallback>
+                      {user?.name
+                        .split(" ")
+                        .slice(0, 2)
+                        .map((name) => name[0])}
+                    </Avatar.Fallback>
+                  </Avatar>
+                </Link>
                 <Button onClick={() => handleSignOut()} variant="outline">
                   Sign Out
                 </Button>

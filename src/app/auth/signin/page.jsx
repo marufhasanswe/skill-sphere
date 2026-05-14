@@ -43,7 +43,7 @@ const SigninPage = () => {
   return (
     <div className="container mx-auto h-[90vh] p-4  flex flex-col items-center justify-center">
       <Form
-        className="flex w-90 md:w-96 mx-auto flex-col gap-4 bg-blue-400 p-6 rounded-xl shadow-2xl "
+        className="flex w-80 md:w-96 mx-auto flex-col gap-4 bg-blue-400 p-6 rounded-xl shadow-2xl "
         onSubmit={onSubmit}
       >
         <h2 className="text-2xl font-semibold text-center text-white">Login</h2>

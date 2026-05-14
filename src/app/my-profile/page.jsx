@@ -37,7 +37,7 @@ const ProfilePage = () => {
             </Avatar>
 
             <div>
-              <h2 className="text-3xl font-bold">{user.name}</h2>
+              <h2 className=" text-3xl font-bold">{user.name}</h2>
 
               <div className="flex gap-2 mt-2">
                 {user.emailVerified && <Chip color="success">Verified</Chip>}
@@ -50,7 +50,7 @@ const ProfilePage = () => {
             <div className="flex items-center gap-3 bg-gray-100 p-4 rounded-xl">
               <Mail size={20} />
               <div>
-                <p className="text-sm text-gray-500">Email</p>
+                <p className="text-xs md:text-sm text-gray-500">Email</p>
 
                 <p>{user.email}</p>
               </div>
@@ -60,7 +60,7 @@ const ProfilePage = () => {
               <User size={20} />
 
               <div>
-                <p className="text-sm text-gray-500">User ID</p>
+                <p className="text-xs md:text-sm text-gray-500">User ID</p>
 
                 <p>{user.id}</p>
               </div>
