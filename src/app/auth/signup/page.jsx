@@ -11,7 +11,6 @@ import {
 } from "@heroui/react";
 import React from "react";
 import { Check } from "@gravity-ui/icons";
-import SectionTitle from "@/components/shared/SectionTitle";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
@@ -49,7 +48,7 @@ const SignupPage = () => {
   return (
     <div className="container mx-auto h-[90vh] p-4 flex flex-col items-center justify-center">
       <Form
-        className="flex w-96 mx-auto flex-col gap-4 bg-blue-400 p-6 rounded-xl shadow-2xl"
+        className="flex w-90 md:w-96 mx-auto flex-col gap-4 bg-blue-400 p-6 rounded-xl shadow-2xl"
         onSubmit={onSubmit}
       >
         <h2 className="text-2xl font-semibold text-center text-white">
@@ -125,10 +124,10 @@ const SignupPage = () => {
           </Button>
           <div className="flex items-center justify-center gap-2">
             <Link
-              href={"/auth/signup"}
+              href={"/auth/signin"}
               className="text-gray-600 hover:text-gray-800"
             >
-              Register
+              SignIn
             </Link>
             <p className="text-center text-lg text-gray-100">Or</p>
           </div>

@@ -29,7 +29,7 @@ const CourseSearch = () => {
       >
         <SearchField.Group>
           <SearchField.SearchIcon />
-          <SearchField.Input className="w-[280px]" placeholder="Search..." />
+          <SearchField.Input className="w-[200px]" placeholder="Search..." />
           <SearchField.ClearButton />
         </SearchField.Group>
       </SearchField>

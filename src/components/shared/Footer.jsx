@@ -6,8 +6,8 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-12">
-      <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+    <footer className="relative md:mt-10">
+      <div className=" h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
       {/* Background Layer */}
       <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
